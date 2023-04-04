@@ -228,8 +228,9 @@ button {
 	height: auto;
 }
 .dome{
-	color: rgb(2,0,36);
+	color: #f8d82e;
 	font-size: 1.5em;
+	text-transform: uppercase;
 }
 .dome:hover, #catch{
 	color: #ff7614;
@@ -546,11 +547,11 @@ button {
 .services_taital {
 	width: 100%;
 	float: left;
-	font-size: 40px;
+	font-size: 3em;
 	text-transform: uppercase;
 	padding-left: 15px;
 	padding-bottom: 40px;
-	color: #f8d82e;
+	color: #bf363e;
 }
 
 .image_1 {
@@ -577,7 +578,8 @@ button {
 	font-size: 18px;
 	margin: 0px;
 	padding-top: 45px;
-	color:#343a40;
+	color:#f4f0e4;
+	line-height: 2.5;
 }
 
 .readmore_bt {
@@ -634,10 +636,10 @@ button {
 .about_text {
 	width: 100%;
 	font-size: 16px;
-	color: #343a40;
-	text-align: center;
+	color:#f4f0e4;
 	margin: 0px;
 	padding-top: 40px;
+	line-height: 2.5;
 }
 
 .readmore_bt_1 {
