@@ -34,7 +34,8 @@ html {
 }
 
 body {
-	color: #666666;
+	background: rgb(2,0,36);
+	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(105,105,140,1) 21%, rgba(236,245,244,1) 100%);
 	font-size: 14px;
 	font-family: 'alk';
 	line-height: 1.80857;
@@ -520,7 +521,6 @@ button {
 .layout_bg {
 	width: 100%;
 	float: left;
-	background-image: url(../images/cliff.jpg);
 	height: auto;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -577,9 +577,6 @@ button {
 	font-size: 18px;
 	margin: 0px;
 	padding-top: 45px;
-	background-image: url(images/smoke.gif);
-	background-size:100%;
-	background-attachment: fixed;
 	color:#343a40;
 }
 
@@ -628,7 +625,7 @@ button {
 .about_taital {
 	width: 100%;
 	font-size: 40px;
-	color: #fbfdfd;
+	color: #ff7614;
 	text-align: center;
 	text-transform: uppercase;
 	font-family: 'DM Sans', sans-serif;
@@ -637,7 +634,7 @@ button {
 .about_text {
 	width: 100%;
 	font-size: 16px;
-	color: #fbfdfd;
+	color: #343a40;
 	text-align: center;
 	margin: 0px;
 	padding-top: 40px;
@@ -687,11 +684,10 @@ button {
 
 .footer_menu {
 	width: 100%;
-	float: left;
 }
 
 .footer_menu ul {
-	margin: 0px;
+	margin: auto;
 	padding: 0px;
 }
 
@@ -701,7 +697,7 @@ button {
 	color: #fbfdfd;
 	text-transform: uppercase;
 	padding-right: 25px;
-	padding-top: 40px;
+	padding-top: 20px;
 }
 
 .footer_menu li a {
@@ -781,7 +777,7 @@ input.Enter_text::placeholder {
 .copyright_section {
 	width: 100%;
 	float: left;
-	background-color: #49bde2;
+	background-color: #343a40;
 	height: auto;
 }
 
