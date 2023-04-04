@@ -40,6 +40,8 @@ body {
 	line-height: 1.80857;
 	font-weight: normal;
 	overflow-x: hidden;
+	text-align: center;
+	justify-content: center;
 }
 
 a {
@@ -202,7 +204,6 @@ button {
 	padding: 0;
 	cursor: pointer;
 }
-
 .full {
 	float: left;
 	width: 100%;
@@ -554,7 +555,6 @@ button {
 
 .image_1 {
 	width: 100%;
-	float: left;
 	text-align: center;
 }
 
@@ -569,19 +569,25 @@ button {
 	font-size: 36px;
 	color:#ff7614;
 	text-transform: uppercase;
+	padding-top: 1em;
 }
 
 .lorem_text {
 	width: 100%;
 	font-size: 18px;
-	color: #fbfdfd;
 	margin: 0px;
 	padding-top: 45px;
+	background-image: url(images/smoke.gif);
+	background-size:100%;
+	background-attachment: fixed;
+	color:#343a40;
 }
 
 .readmore_bt {
 	width: 200px;
 	margin-top: 90px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .readmore_bt a {
@@ -590,15 +596,15 @@ button {
 	padding: 14px 45px;
 	color: #ffffff;
 	font-size: 18px;
-	background-color: #070c0c;
+	background-color: #343a40;
 	border-radius: 5px;
 	margin-top: 40px;
 	text-transform: uppercase;
 }
 
 .readmore_bt a:hover {
-	color: #2a2a2a;
-	background-color: #ffffff;
+	color: #343a40;
+	background-color: #ff7614;
 }
 
 

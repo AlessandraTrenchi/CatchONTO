@@ -125,6 +125,10 @@
     .mean-container .mean-nav ul li a.mean-expand {
         top: 0;
     }
+    .imm{
+        width: 140px;
+        height: 180px;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -203,9 +207,7 @@
     .about_box {
         padding: 50px 10px 50px 10px;
     }
-    .image_1 {
-        padding-top: 20px;
-    }
+    
     .readmore_bt_1 {
         padding-top: 50px;
     }
