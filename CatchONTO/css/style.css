@@ -25,6 +25,10 @@
 	font-family: 'alk';
 	src: url(fonts/Alkatra-Regular.ttf);
 }
+@font-face {
+	font-family: 'chan';
+	src: url(fonts/ChangaOne-Regular.ttf);
+}
 html {
 	scroll-behavior: smooth;
 }
@@ -32,7 +36,7 @@ html {
 body {
 	color: #666666;
 	font-size: 14px;
-	font-family: 'alk', sans-serif;
+	font-family: 'alk';
 	line-height: 1.80857;
 	font-weight: normal;
 	overflow-x: hidden;
@@ -118,6 +122,7 @@ ol {
 	margin: 0px;
 	padding: 0px;
 	list-style: none;
+	font-family: 'alk';
 }
 
 p {
@@ -223,12 +228,14 @@ button {
 }
 .dome{
 	color: #fffff0;
+	font-size: 1.5em;
 }
 .dome:hover, #catch{
 	color: #ff7614;
 }
 #catch{
 	font-size: 3em;
+	font-family: 'chan';
 }
 .logo {
 	width: 60%;
@@ -540,7 +547,6 @@ button {
 	width: 100%;
 	float: left;
 	font-size: 40px;
-	color: #fcfefe;
 	text-transform: uppercase;
 	padding-left: 15px;
 	padding-bottom: 40px;
@@ -558,11 +564,10 @@ button {
 	height: auto;
 	padding: 65px 30px;
 }
-
 .pool_text {
 	width: 100%;
 	font-size: 36px;
-	color: #fcfefe;
+	color:#ff7614;
 	text-transform: uppercase;
 }
 
