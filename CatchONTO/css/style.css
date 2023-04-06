@@ -29,6 +29,10 @@
 	font-family: 'chan';
 	src: url(fonts/ChangaOne-Regular.ttf);
 }
+@font-face {
+	font-family: 'donut';
+	src: url(fonts/DancingDonutsNF.ttf);
+}
 html {
 	scroll-behavior: smooth;
 }
@@ -237,7 +241,7 @@ button {
 }
 #catch{
 	font-size: 3em;
-	font-family: 'chan';
+	font-family: 'donut';
 }
 .logo {
 	width: 60%;
