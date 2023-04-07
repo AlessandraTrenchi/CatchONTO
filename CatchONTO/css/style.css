@@ -243,6 +243,7 @@ button {
 	font-size: 3em;
 	font-family: 'donut';
 }
+
 .logo {
 	width: 60%;
 	float: left;
@@ -592,7 +593,12 @@ button {
 	margin-left: auto;
 	margin-right: auto;
 }
-
+#author{
+	width: 100%;
+	font-size: 36px;
+	color:#bf363e;
+	text-transform: uppercase;
+}
 .readmore_bt a {
 	width: 100%;
 	text-align: center;
