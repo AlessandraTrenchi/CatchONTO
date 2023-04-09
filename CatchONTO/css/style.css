@@ -652,6 +652,23 @@ button {
 	line-height: 2.5;
 }
 
+.about_text a{
+	color: #f8d82e;
+}
+
+.about_text a:hover{
+	color: #ff7614;
+}
+
+.team_text {
+	width: 100%;
+	font-size: 14px;
+	color:#f4f0e4;
+	margin: 0px;
+	padding-top: 40px;
+	line-height: 2.5;
+}
+
 .readmore_bt_1 {
 	width: 200px;
 	padding-top: 90px;
@@ -675,114 +692,17 @@ button {
 	background-color: #ffffff;
 }
 
+#teamRow{
+	display: flex;
+	justify-content: center;
+}
+
+#teamPic{
+	border: 5px solid #f8d82e;
+}
+
 
 /* about section end */
-
-
-/* footer section start */
-
-.footer_section {
-	width: 100%;
-	float: left;
-	background-color: #111111;
-	height: auto;
-	padding: 50px 0px;
-}
-
-.footer_logo {
-	width: 100%;
-	float: left;
-}
-
-.footer_menu {
-	width: 100%;
-}
-
-.footer_menu ul {
-	margin: auto;
-	padding: 0px;
-}
-
-.footer_menu li {
-	float: left;
-	font-size: 16px;
-	color: #fbfdfd;
-	text-transform: uppercase;
-	padding-right: 25px;
-	padding-top: 20px;
-}
-
-.footer_menu li a {
-	color: #fbfdfd;
-}
-
-.footer_menu li a:hover {
-	color: #63dae0;
-}
-
-.social_icon {
-	width: 100%;
-	float: left;
-}
-
-.social_icon ul {
-	margin: 0px;
-	padding: 0px;
-}
-
-.social_icon li {
-	float: left;
-	padding-right: 10px;
-	padding-top: 15px;
-}
-
-.useful_text {
-	width: 100%;
-	font-size: 24px;
-	color: #ffffff;
-	font-weight: bold;
-	text-transform: uppercase;
-}
-
-.Enter_text {
-	width: 100%;
-	float: left;
-	font-size: 18px;
-	color: #fefefe;
-	border: 1px solid #fefefe;
-	background-color: transparent;
-	padding: 8px 10px;
-	margin-top: 10px;
-}
-
-input.Enter_text::placeholder {
-	color: #fefefe;
-}
-
-.subscribe_bt {
-	width: 100%;
-	margin: 0 auto;
-}
-
-.subscribe_bt a {
-	width: 100%;
-	float: left;
-	font-size: 18px;
-	color: #fefefe;
-	border: 1px solid #fefefe;
-	text-align: center;
-	padding: 10px 0px;
-	margin-top: 20px;
-}
-
-.subscribe_bt a:hover {
-	color: #111111;
-	background-color: #ffffff;
-}
-
-
-/* footer section end */
-
 
 /* copyright section start */
 
@@ -815,4 +735,63 @@ input.Enter_text::placeholder {
 
 .margin_top_90 {
 	margin-top: 90px;
+}
+
+/* highlights */
+.highlighted {
+	background-color: rgb(243, 243, 125);
+	color: black;
+}
+
+.object {
+	background-color: red;
+}
+
+.properName {
+	background-color: blue;
+}
+
+.movement {
+	background-color: lightseagreen;
+}
+
+.static {
+	background-color: darkgreen;
+}
+
+.adj {
+	background-color: midnightblue;
+}
+
+.body {
+	background-color: orangered;
+}
+
+.needs {
+	background-color: yellow;
+	color: black;
+}
+
+.state {
+	background-color: rgb(65, 40, 20);
+}
+
+.materialism {
+	background-color: rgb(92, 192, 92);
+}
+
+.slang {
+	background-color: grey;
+}
+
+.time {
+	background-color: rgb(240, 78, 105);
+}
+
+.place {
+	background-color: purple;
+}
+
+.neg {
+	background-color: black;
 }
