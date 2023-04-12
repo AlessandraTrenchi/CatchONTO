@@ -159,7 +159,10 @@ img {
 	max-width: 100%;
 	height: auto;
 }
-
+h3{
+	color:#ff7614;
+	font-size: 1.5em;
+}
  :focus {
 	outline: 0;
 }
