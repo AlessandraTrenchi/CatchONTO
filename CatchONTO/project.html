@@ -95,6 +95,39 @@
             </div>
          </div>
       </div>
+      <div class="services_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="services_box">
+                     <h2 class="pool_text" id="forma">Ontology Formation</h2>
+                     <p class="lorem_text">
+                        <h3>Preliminary information:</h3>
+                        <p>An ONTOLOGY is a tight relation between subject, predicate, object (triplets). The purpose of building an ontology is to create a formal representation of knowledge in a specific domain that can be used to support tasks such as information retrieval, knowledge management, and decision-making.                        </p>
+                        <p>QUERIES: automatic knowledge extraction.                        </p>
+                        <p>METADATA: declaration of the whole ontology.                        </p>
+                        <p>TOOLS: Google Doc, Figma, Turtle, Protégé, WebOwl, LODE.                         </p>
+                        <p>Ontology overview: classes, object properties, data properties. For each class: has sub-properties, has domain, has range, has sub-classes (for each class + class index).                         </p>
+                     </p>
+                     <h3>Development:</h3>
+                     <ul>
+                        <li>Classify words;</li>
+                        <li>Define what classes best fit our text;</li> 
+                        <li>Which word fit in which class;</li>
+                        <li>From the general areas (semantic classes), extract more classes (logical classes), than list all words.</li></p>
+                        <li>Turtle: reference ontologies on the web, starting point of the ontology: querying to find the relationship between superclass, property and subclass. Turtle is the ontology declaration: you can see the relation between the triplets; you can see that a subject has multiple properties/relations.</li>
+                        <li>Once the relationship is established, the turtle uris are exported in owl format.</li>
+                        <li>The turtle file in owl format is then debugged on Protégé, you can read about the ontology evaluation <a href="evaluation.html">here</a>.</li>
+                        <li>The debugged final version is then converted into json and uploaded on WebOWL.                        </li>
+                        <li>WebOWL is the tool used to extract a graphical representation from the Turtle querying. </li>
+                        <li>All entities in our ontology start from the URI and add after # the name of the subclass. If you click on any property you download the turtle in owl format where you can see the entities of every defined element. Look for word details on properties in WebOwl (link). </li>
+                        <li>The final tool used was LODE, adopted to get a tabular representation of the graphical ontology; the process was that of inserting the URL we imported the ontology on Github: subject, IRI (general identifier of the class), has super-classes (property), expression of place (object).
+                        </li>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
    <!-- layout_bg section end -->
    
    <!-- copyright section start -->
