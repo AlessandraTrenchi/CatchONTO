@@ -247,8 +247,8 @@ button {
 	font-family: 'donut';
 }
 
-.logo {
-	width: 60%;
+#logo {
+	width: 17%;
 	float: left;
 	text-align: center;
 	padding-top: 10px;
@@ -533,6 +533,7 @@ button {
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding-bottom: 100px;
+	margin-top: 5%;
 }
 
 
@@ -814,4 +815,69 @@ iframe{
 
 .neg {
 	background-color: black;
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	overflow: hidden;
+	width: 100%;
+	z-index: 1;
+	height: 13%;
+}
+
+#ClassTable {
+	text-align: center;
+	text-indent: 10px;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 15%;
+	overflow: hidden;
+	float: left;
+	width: 25%;
+	background-color: #fff5c5;
+	font-size: 13px;
+	margin-bottom: 5%;
+	border: 3px solid #ff7614;
+	padding: 2%;
+}
+
+#classGroup {
+	color: black;
+}
+
+#ClassButton {
+	cursor: pointer;
+	font-size: 100%;
+	border: 1px solid #181616;
+	color: white;
+	padding-right: 5%;
+	padding-left: 5%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	border-radius: 20%;
+	margin: 3px;
+}
+
+#NeedsButton {
+	cursor: pointer;
+	font-size: 100%;
+	border: 1px solid #181616;
+	color: black;
+	padding-right: 5%;
+	padding-left: 5%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	border-radius: 20%;
+	margin: 3px;
+}
+
+#chapter {
+	text-align: left;
+	position: relative;
+	padding-left: 5%;
+	padding-right: 3%;
+	overflow: auto;
+	top: 15%;
+	text-align: center;
 }
