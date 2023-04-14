@@ -122,7 +122,7 @@ function adjBack(){
 
 //functions to highlight thematic classes in the chapters 
 
-function body(){
+function bodyParts(){
   var x=document.getElementsByClassName("orange");
   for (i = 0; i < x.length; i++) {
     x[i].style = "background-color: orangered;";
@@ -142,14 +142,14 @@ function bodyBack(){
 
   var BodyBtn=document.getElementById("BodyBtn");
   BodyBtn.innerHTML=`
-  <span id="BodyBtn"><button type="button" onclick="body()" id="ClassButton" class="body">Body parts</button></span>
+  <span id="BodyBtn"><button type="button" onclick="bodyParts()" id="ClassButton" class="body">Body parts</button></span>
   `;
 }
 
 function needs(){
   var x=document.getElementsByClassName("yellow");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: yellow;";
+    x[i].style = "background-color: yellow; color: black;";
   }  
 
   var NeedsBtn=document.getElementById("NeedsBtn");
@@ -161,7 +161,7 @@ function needs(){
 function needsBack(){
   var x=document.getElementsByClassName("yellow");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: none;";
+    x[i].style = "background-color: none; color: white;";
   } 
 
   var NeedsBtn=document.getElementById("NeedsBtn");
@@ -287,5 +287,29 @@ function placeBack(){
   var PlaceBtn=document.getElementById("PlaceBtn");
   PlaceBtn.innerHTML=`
   <span id="PlaceBtn"><button type="button" onclick="place()" id="ClassButton" class="place">Expressions of Place</button></span>
+  `;
+}
+
+function neg(){
+  var x=document.getElementsByClassName("black");
+  for (i = 0; i < x.length; i++) {
+    x[i].style = "background-color: black;";
+  }  
+
+  var NegBtn=document.getElementById("NegBtn");
+  NegBtn.innerHTML=`
+  <span id="NegBtn"><button type="button" onclick="negBack()" id="ClassButton" class="neg">Negative Connotations</button></span>
+  `;  
+}  
+
+function negBack(){
+  var x=document.getElementsByClassName("black");
+  for (i = 0; i < x.length; i++) {
+    x[i].style = "background-color: none;";
+  } 
+
+  var NegBtn=document.getElementById("NegBtn");
+  NegBtn.innerHTML=`
+  <span id="NegBtn"><button type="button" onclick="neg()" id="ClassButton" class="neg">Negative Connotations</button></span>
   `;
 }
