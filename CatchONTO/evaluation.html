@@ -55,29 +55,160 @@
                   <div class="services_box">
                      <h2 class="pool_text" id="formaz">Ontology Evaluation</h2>
                      <p class="lorem_text">
-                        <h3>Preliminary information:</h3>
-                        <ul class="lorem_text">
-                           <li>An ONTOLOGY is a tight relation between subject, predicate, object (triplets). The purpose of building an ontology is to create a formal representation of knowledge in a specific domain that can be used to support tasks such as information retrieval, knowledge management, and decision-making.                       </li>
-                              <li>QUERIES: automatic knowledge extraction. </li>
-                           <li>METADATA: declaration of the whole ontology.</li>
-                           <li>TOOLS: Google Doc, Figma, Turtle, Protégé, WebOwl, LODE. </li>
-                           <li>Ontology overview: classes, object properties, data properties. For each class: has sub-properties, has domain, has range, has sub-classes (for each class + class index).                         </li>
-                        </ul>
+                        <h3>Analysis made with <a href="https://oops.linkeddata.es/response-advanced.jsp" class="qui">OOPS!</a></h3>
                         <br><br>
-                     <h3>Development:</h3>
+                        <ul class="lorem_text">
+                           <h3>Error 1</h3>
+                              <li>Results for P40: Namespace hijacking. 1 case | Critical.</li> 
+                                 <li>Critical: it refers to reusing or referring to terms from another namespace that are not defined in such namespace. This is an undesirable situation as no information can be retrieved when looking up those undefined terms. This pitfall is related to the Linked Data publishing guidelines provided in [11]: "Only define new terms in a namespace that you control" and to the guidelines provided in [5].                                  </li>
+                                 <li>This pitfall appears in the following <a href="https://www.w3.org/2000/01/rdf-schema#laber" class="qui">elements</a>.                                </li>
+                                 <h4>Explanation and solution:                                 </h4>
+                                 <li>This problem was caused because of a typo in our RDF (<i>laber</i> instead of <i>label</i>).                                 </i></li>
+                              </ul>
+                              <br><br>
+                           <ul class="lorem_text">
+                              <h3>Error 2</h3>
+                              <li>Results for P10: Missing disjointness.ontology* | Important Important.</li>
+                              <li>The ontology lacks disjoint axioms between classes or between properties that should be defined as disjoint. This pitfall is related with the guidelines provided in [6], [2] and [7].
+                              </li>
+                              <li>*This pitfall applies to the ontology in general instead of specific elements.</li>
+                              <h4>Explanation and solution:                                 </h4>
+                              <li><i>Some of our classes shared individuals between them so we added the owl:disjointWith axiom to ensure that no individual can be a member of both classes at the same time. </i>
+                              </li>
+                           </ul>
+                           
+                        <br><br>
+                        <ul class="lorem_text">
+                           <h3>Error 3</h3>
+                           <li>Results for P06: Including cycles in a class hierarchy.8 cases | Critical Critical.                           </li>
+                           <li>A cycle between two classes in a hierarchy is included in the ontology. A cycle appears when some class A has a subclass (directly or indirectly) B, and at the same time B is a superclass (directly or indirectly) of A. This pitfall was first identified in [3]. Guidelines presented in [2] also provide recommendations to avoid this pitfall.
+                           </li>
+                           <li>The following classes are inolved in a cycle:</li>
+                          <i><li>https://catcherRye.github.io/catcherRye.owl#ContainerExpressions,</li>
+                           <li>https://catcherRye.github.io/catcherRye.owl#AbsoluteLocationExpressions.</li>
+                           <li>https://catcherRye.github.io/catcherRye.owl#ExpressionOfPlace,</li>
+                           <li>https://catcherRye.github.io/catcherRye.owl#DirectionalExpressions.</li>
+                           <li>https://catcherRye.github.io/catcherRye.owl#ExpressionOfPlace,</li>
+                           <li>https://catcherRye.github.io/catcherRye.owl#GeographicExpressions.</li>
+                           <li>https://catcherRye.github.io/catcherRye.owl#ExpressionOfPlace,</li>
+                           <li>https://catcherRye.github.io/catcherRye.owl#RoomExpressions.</li>
+                           <li>https://catcherRye.github.io/catcherRye.owl#ExpressionOfPlace,</li>
+                           <li>https://catcherRye.github.io/catcherRye.owl#RelativeLocationExpressions.</li>
+                           <li>https://catcherRye.github.io/catcherRye.owl#ExpressionOfPlace,</li>
+                           <li>https://catcherRye.github.io/catcherRye.owl#BuildingExpressions.</li>
+                           <li>https://catcherRye.github.io/catcherRye.owl#ExpressionOfPlace,</li>
+                           <li>https://catcherRye.github.io/catcherRye.owl#CityExpressions.</li> </i>
+                            
+                           <h4>Explanation and solution:                                 </h4>
+                           <li>In our code, <i>catcherRye:ExpressionOfPlace</i> was defined as a subclass of multiple classes at once, which caused the issue.</li>
+                           <li>What we did was to create  a new class, <i>catcherRye:LocationExpressions</i>, as a subclass of <i>catcherRye:ExpressionOfPlace</i>, so the other classes, such as <i>catcherRye:GeographicExpressions</i>, <i>catcherRye:CityExpressions</i>, and so on, were now subclasses of <i>catcherRye:LocationExpressions. </i></li>
+                        </ul>
+                        
+                     <br><br>
                      <ul class="lorem_text">
-                        <li>Classify words;</li>
-                        <li>Define what classes best fit our text;</li> 
-                        <li>Which word fit in which class;</li>
-                        <li>From the general areas (semantic classes), extract more classes (logical classes), than list all words.</li></p>
-                        <li>Turtle: reference ontologies on the web, starting point of the ontology: querying to find the relationship between superclass, property and subclass. Turtle is the ontology declaration: you can see the relation between the triplets; you can see that a subject has multiple properties/relations.</li>
-                        <li>Once the relationship is established, the turtle URIs are exported in owl format.</li>
-                        <li>The turtle file in owl format is then debugged on Protégé. You can read about the ontology evaluation <a href="evaluation.html" class="qui">here</a>.</li>
-                        <li>The debugged final version is then converted into json and uploaded on WebOWL.                        </li>
-                        <li>WebOWL is the tool used to extract a graphical representation from the Turtle querying. </li>
-                        <li>All entities in our ontology start from the URI and add after # the name of the subclass. If you click on any property you download the turtle in owl format where you can see the entities of every defined element. Look for word details on properties in <a href="indexo.html" class="qui">webOWL</a>. </li>
-                        <li>The final tool used was LODE, adopted to get a tabular representation of the graphical ontology; the process was that of inserting the URL we imported the ontology on Github: subject, IRI (general identifier of the class), has super-classes (property), expression of place (object).
+                        <h3>Error 4</h3>
+                        <li>Results for P11: Missing domain or range in properties.16 cases | Important Important                        </li>
+                        <li>Object and/or datatype properties without domain or range (or none of them) are included in the ontology.
                         </li>
+                        <li>This pitfall appears in the following elements:</li>
+                       <i><li>https://catcherRye.github.io/catcherRye.owl#hasShape</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasQuality</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasAge</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasAdjectiveSize</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasAdjectiveSize</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasQuantity</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasSpatialRelation</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasComparison</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasColor</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasManner</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasIntensity</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasOtherProperty</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasOpinion</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasLatitude</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasLongitude</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasAltitude</li>
+                     </i>
+                        <li>*Tip: Solving this pitfall may lead to new results for other pitfalls and suggestions. We encourage you to solve all cases when needed and see what else you can get from <a href="https://oops.linkeddata.es/response-advanced.jsp" class="qui">OOPS!</a>.
+                        </li>
+                        <h4>Explanation and solution:                                 </h4>
+                        <li>Some properties of our anthology where missing Domain and Range.                        </li></ul>
+                     <br><br>
+                     <ul class="lorem_text">
+                        <h3>Error 5</h3>
+                        <li>An ontology element is used as a class without having been explicitly declared as such using the primitives <i>owl:Class</i> or <i>rdfs:Class</i>. This pitfall is related with the common problems listed in [8].</li>
+                        <li>This pitfall appears in the following elements:</li>
+                       <i><li>https://catcherRye.github.io/catcherRye.owl#PeriodExpressions </li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#DirectObject</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#ReferenceOrigin</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#EmotionType</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#ExperienceType</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#NameOrigin</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#ExperienceDomain</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#PhysicalStateSeverity</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#MealTimeExpressions</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#ReferenceType</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#WeekdayExpressions</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#SeasonExpressions</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#PhysicalStateType</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#EntityType</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#MonthExpressions</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#OrganizationIndustry</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#OrganizationType</li>
+                        
+                     </i>
+                        <h4>Explanation and solution:                                 </h4>
+                        <li>The issue was that several ontology elements were being used as classes without being explicitly declared as such using <i>owl:Class</i> or <i>rdfs:Class</i>. After declaring them it was solved.
+                        </li></ul>
+                     <br><br>
+                     <ul class="lorem_text">
+                        <h3>Error 6</h3>
+                        <li>This pitfall appears when any relationship (except for those that are defined as symmetric properties using <i>owl:SymmetricProperty</i>) does not have an inverse relationship (<i>owl:inverseOf</i>) defined within the ontology.
+                        </li>
+                        <li>This pitfall appears in the following elements:</li>
+                       <i><li>This pitfall appears in the following elements:</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasOpinion</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasOrganizationIndustry</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#isContainedIn</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasOtherProperty</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasIntensity</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#contains</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#isLocatedInCity</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasEntityType</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#isPartOfBuilding</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasOrganizationType</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasManner</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasColor</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasDirectObject</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasExperienceType</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasReferenceOrigin</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasSpatialRelation</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasComparison</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasMaterial</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#isLocatedInCountry</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasEmotionType</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasQuantity</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasDestination</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#isRelativeTo</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#isLocatedInState</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasNameOrigin</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasExpression</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasReferenceType</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasAdjectiveSize</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasMeansOfTransportation</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasOrigin</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasExperienceDomain</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasPhysicalStateType</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasPhysicalStateSeverity</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasQuality</li>
+                        <li>https://catcherRye.github.io/catcherRye.owl#hasShape</li>
+                        
+                     </i>
+                       
+                        <h4>Explanation and solution:                                 </h4>
+                        <li>
+                        To fix this issue we defined inverse relationships for each of the object properties listed in the error message. 
+                                                </li></ul>
+                     <br><br>
                   </div>
                </div>
             </div>
