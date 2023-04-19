@@ -46,6 +46,7 @@ body {
 	overflow-x: hidden;
 	text-align: center;
 	justify-content: center;
+	margin: 0!important;
 }
 
 a {
@@ -623,6 +624,8 @@ button {
 iframe{
 	border-style: none;
 	padding-bottom: 0;
+	height: 78em; 
+	width: 88em;
 }
 .readmore_bt a {
 	width: 100%;
@@ -676,7 +679,9 @@ iframe{
 	padding-top: 40px;
 	line-height: 2.5;
 }
-
+#smok title{
+	display: none;
+}
 .about_text a{
 	color: #f8d82e;
 }

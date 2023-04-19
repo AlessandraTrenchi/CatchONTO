@@ -126,8 +126,19 @@
         top: 0;
     }
     .imm{
-        width: 140px;
         height: 180px;
+    }
+    .uno, .active{
+        font-size: 0.5em;
+    }
+    #catch{
+        font-size: 2em;
+    }
+    .services_section{
+        padding-top: 8em;
+    }
+    .services_taital, #author, #extract, .about_tailtal, .onto{
+        font-size: 2em;
     }
 }
 
@@ -150,14 +161,22 @@
         left: -57px;
         top: 23%;
     }
-    .lorem_text {
+    .lorem_text{
         font-size: 14px;
+    }
+    .cotext{
+        font-size: 1.3em;
     }
     .lorem_text {
         padding-top: 0px;
     }
     .readmore_bt {
         margin-top: 50px;
+
+    }
+    iframe{
+        height:50em;
+        width: 70em;
     }
 }
 
@@ -189,14 +208,11 @@
     .pool_text {
         font-size: 34px;
     }
-    .lorem_text {
-        font-size: 14px;
+    .lorem_text, .about_text, .cotext{
+        font-size: 1em;
     }
     .services_box {
         padding: 30px 10px;
-    }
-    .services_section {
-        padding-bottom: 0px;
     }
     .lorem_text {
         padding-top: 0px;
@@ -220,6 +236,17 @@
     }
     .subscribe_bt a {
         font-size: 14px;
+    }
+    .uno, .active{
+        font-size: 0.5em;
+    }
+    #catch{
+        font-size: 2em;
+    }
+    iframe{
+        height:45em;
+        width:55em;
+        justify-content: center;
     }
 }
 
@@ -263,20 +290,18 @@
     .image_1 {
         padding-top: 30px;
     }
-    .pool_text {
-        font-size: 34px;
+    .pool_text{
+        font-size: 2em;
     }
     .services_box {
         padding: 30px 10px;
-    }
-    .services_section {
-        padding-bottom: 0px;
     }
     .lorem_text {
         padding-top: 10px;
     }
     .readmore_bt {
         margin-top: 50px;
+        margin-bottom: 50px;
     }
     .about_box {
         padding: 50px 10px 50px 10px;
@@ -300,6 +325,16 @@
     }
     .subscribe_bt a {
         font-size: 14px;
+    }
+    .uno, .active{
+        font-size: 0.5em;
+    }
+    #catch{
+        font-size: 1.5em;
+    }
+    iframe{
+        height: 35em;
+        width:42em;
     }
 }
 
@@ -352,19 +387,24 @@
         padding-top: 30px;
     }
     .pool_text {
-        font-size: 34px;
+        font-size: 1.5em;
     }
     .services_box {
         padding: 30px 10px;
+        padding-bottom: 0;
     }
-    .services_section {
-        padding: 0px;
-    }
+    
     .lorem_text {
         padding-top: 10px;
+        font-size: 1em;
     }
     .readmore_bt {
         margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .readmore_bt a{
+        padding: 10px 20px;
+        font-size: 1em;
     }
     .about_box {
         padding: 50px 10px 50px 10px;
@@ -383,4 +423,17 @@
     .services_box {
         margin-top: 30px;
     }
+    .uno, .active{
+        font-size: 0.5em;
+    }
+    .navbar-header{
+        font-size: 1em;
+    }
+   #classGroup{
+    font-size: 0.8em;
+   }
+   iframe{
+    height: 35em;
+    width:30em;
+}
 }
