@@ -176,7 +176,7 @@
     }
     iframe{
         height:50em;
-        width: 70em;
+        width: 60em;
     }
 }
 
@@ -245,7 +245,7 @@
     }
     iframe{
         height:45em;
-        width:55em;
+        width:40em;
         justify-content: center;
     }
 }
@@ -334,7 +334,7 @@
     }
     iframe{
         height: 35em;
-        width:42em;
+        width:30em;
     }
 }
 
@@ -434,6 +434,6 @@
    }
    iframe{
     height: 35em;
-    width:30em;
+    width:25em;
 }
 }
