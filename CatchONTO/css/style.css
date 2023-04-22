@@ -890,3 +890,21 @@ iframe{
 	top: 15%;
 	text-align: center;
 }
+
+#extractionBox {
+	background-color: white;
+}
+
+.classesPic {
+	border: 3px solid #ff7614;
+	background-color: #fff5c5;
+	padding: 2%;
+}
+
+.chapterText {
+	width: 100%;
+	font-size: 18px;
+	margin: 0px;
+	padding-top: 45px;
+	line-height: 2;
+}

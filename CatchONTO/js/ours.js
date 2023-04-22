@@ -3,7 +3,7 @@
 function object(){
   var x=document.getElementsByClassName("red");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: red;";
+    x[i].style = "background-color: red; color: white;";
   }  
 
   var objBtn=document.getElementById("objBtn");
@@ -15,7 +15,7 @@ function object(){
 function objectBack(){
   var x=document.getElementsByClassName("red");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: none;";
+    x[i].style = "background-color: none; color: black;";
   } 
 
   var objBtn=document.getElementById("objBtn");
@@ -27,7 +27,7 @@ function objectBack(){
 function proper(){
   var x=document.getElementsByClassName("blue");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: blue;";
+    x[i].style = "background-color: blue; color: white;";
   }  
 
   var ProperBtn=document.getElementById("ProperBtn");
@@ -39,7 +39,7 @@ function proper(){
 function properBack(){
   var x=document.getElementsByClassName("blue");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: none;";
+    x[i].style = "background-color: none; color: black;";
   } 
 
   var ProperBtn=document.getElementById("ProperBtn");
@@ -51,7 +51,7 @@ function properBack(){
 function movement(){
   var x=document.getElementsByClassName("lightBlue");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: lightseagreen;";
+    x[i].style = "background-color: lightseagreen; color: white;";
   }  
 
   var MoveBtn=document.getElementById("MoveBtn");
@@ -63,7 +63,7 @@ function movement(){
 function movementBack(){
   var x=document.getElementsByClassName("lightBlue");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: none;";
+    x[i].style = "background-color: none; color: black;";
   } 
 
   var MoveBtn=document.getElementById("MoveBtn");
@@ -75,7 +75,7 @@ function movementBack(){
 function static(){
   var x=document.getElementsByClassName("green");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: darkgreen;";
+    x[i].style = "background-color: darkgreen; color: white;";
   }  
 
   var StaticBtn=document.getElementById("StaticBtn");
@@ -87,7 +87,7 @@ function static(){
 function staticBack(){
   var x=document.getElementsByClassName("green");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: none;";
+    x[i].style = "background-color: none; color: black;";
   } 
 
   var StaticBtn=document.getElementById("StaticBtn");
@@ -99,7 +99,7 @@ function staticBack(){
 function adj(){
   var x=document.getElementsByClassName("middleBlue");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: midnightblue;";
+    x[i].style = "background-color: midnightblue; color: white;";
   }  
 
   var AdjBtn=document.getElementById("AdjBtn");
@@ -125,7 +125,7 @@ function adjBack(){
 function bodyParts(){
   var x=document.getElementsByClassName("orange");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: orangered;";
+    x[i].style = "background-color: orangered; color: white;";
   }  
 
   var BodyBtn=document.getElementById("BodyBtn");
@@ -137,7 +137,7 @@ function bodyParts(){
 function bodyBack(){
   var x=document.getElementsByClassName("orange");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: none;";
+    x[i].style = "background-color: none; color: black;";
   } 
 
   var BodyBtn=document.getElementById("BodyBtn");
@@ -149,7 +149,7 @@ function bodyBack(){
 function needs(){
   var x=document.getElementsByClassName("yellow");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: yellow; color: black;";
+    x[i].style = "background-color: yellow;";
   }  
 
   var NeedsBtn=document.getElementById("NeedsBtn");
@@ -161,7 +161,7 @@ function needs(){
 function needsBack(){
   var x=document.getElementsByClassName("yellow");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: none; color: white;";
+    x[i].style = "background-color: none;";
   } 
 
   var NeedsBtn=document.getElementById("NeedsBtn");
@@ -173,7 +173,7 @@ function needsBack(){
 function states(){
   var x=document.getElementsByClassName("brown");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: rgb(65, 40, 20);";
+    x[i].style = "background-color: rgb(65, 40, 20); color: white;";
   }  
 
   var StatesBtn=document.getElementById("StatesBtn");
@@ -185,7 +185,7 @@ function states(){
 function statesBack(){
   var x=document.getElementsByClassName("brown");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: none;";
+    x[i].style = "background-color: none; color: black;";
   } 
 
   var StatesBtn=document.getElementById("StatesBtn");
@@ -197,7 +197,7 @@ function statesBack(){
 function materialism(){
   var x=document.getElementsByClassName("lightGreen");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: rgb(92, 192, 92);";
+    x[i].style = "background-color: rgb(92, 192, 92); color: white;";
   }  
 
   var MaterialBtn=document.getElementById("MaterialBtn");
@@ -209,7 +209,7 @@ function materialism(){
 function materialismBack(){
   var x=document.getElementsByClassName("lightGreen");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: none;";
+    x[i].style = "background-color: none; color: black;";
   } 
 
   var MaterialBtn=document.getElementById("MaterialBtn");
@@ -221,7 +221,7 @@ function materialismBack(){
 function slang(){
   var x=document.getElementsByClassName("grey");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: grey;";
+    x[i].style = "background-color: grey; color: white;";
   }  
 
   var SlangBtn=document.getElementById("SlangBtn");
@@ -233,7 +233,7 @@ function slang(){
 function slangBack(){
   var x=document.getElementsByClassName("grey");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: none;";
+    x[i].style = "background-color: none; color: black;";
   } 
 
   var SlangBtn=document.getElementById("SlangBtn");
@@ -245,7 +245,7 @@ function slangBack(){
 function time(){
   var x=document.getElementsByClassName("pink");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: rgb(240, 78, 105);";
+    x[i].style = "background-color: rgb(240, 78, 105); color: white;";
   }  
 
   var TimeBtn=document.getElementById("TimeBtn");
@@ -257,7 +257,7 @@ function time(){
 function timeBack(){
   var x=document.getElementsByClassName("pink");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: none;";
+    x[i].style = "background-color: none; color: black;";
   } 
 
   var TimeBtn=document.getElementById("TimeBtn");
@@ -269,7 +269,7 @@ function timeBack(){
 function place(){
   var x=document.getElementsByClassName("purple");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: purple;";
+    x[i].style = "background-color: purple; color: white;";
   }  
 
   var PlaceBtn=document.getElementById("PlaceBtn");
@@ -281,7 +281,7 @@ function place(){
 function placeBack(){
   var x=document.getElementsByClassName("purple");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: none;";
+    x[i].style = "background-color: none; color: black;";
   } 
 
   var PlaceBtn=document.getElementById("PlaceBtn");
@@ -293,7 +293,7 @@ function placeBack(){
 function neg(){
   var x=document.getElementsByClassName("black");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: black;";
+    x[i].style = "background-color: black; color: white;";
   }  
 
   var NegBtn=document.getElementById("NegBtn");
@@ -305,7 +305,7 @@ function neg(){
 function negBack(){
   var x=document.getElementsByClassName("black");
   for (i = 0; i < x.length; i++) {
-    x[i].style = "background-color: none;";
+    x[i].style = "background-color: none; color: black;";
   } 
 
   var NegBtn=document.getElementById("NegBtn");
